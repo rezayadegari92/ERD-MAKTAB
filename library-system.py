@@ -1,4 +1,4 @@
-class LibrarySystem:
+class Book:
     def __init__(self, isbn, title, author, inventory : bool):
         self.inventory = inventory
         self.isbn = isbn
@@ -18,9 +18,9 @@ class Member:
         borrowing_details = Borrowing(self, book, due_date)
         self.borrowed_books.append(borrowing_details)
 
-class Borrowing:
+class Library:
     def __init__(self, member, book, due_date):
-        self.member = member  
+        self.member = member
         self.book = book
         self.borrow_date = datetime.now()
         self.due_date = due_date
